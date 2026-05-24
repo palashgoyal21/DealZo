@@ -62,7 +62,7 @@ const REVIEWS = [
   { name: "James R.", rating: 4, date: "2 months ago", text: "Good experience overall. Took a couple days to ship but worth it." },
 ];
 
-export default function ListingPage({ params }: { params: { id: string } }) {
+export default function ListingPage({ params }: { params: any }) {
   const id = parseInt(params.id);
   const item = LISTINGS[id] || LISTINGS[1];
   const cond = COND_COLORS[item.condition] || { bg: "#eee", text: "#333" };
