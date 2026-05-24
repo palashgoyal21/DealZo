@@ -34,7 +34,7 @@ const COND_COLORS: Record<string, { bg: string; text: string }> = {
   "Good": { bg: "#fef3e2", text: "#92400e" },
 };
 
-export default function ProfilePage({ params }: { params: Promise<{ id: string }> }) {
+export default function ProfilePage({ params }: { params: any }) {
   const { id } = React.use(params);
   const seller = SELLERS[id] || SELLERS["techresell"];
   const sellerListings = LISTINGS.filter(l => l.seller === seller.id);
