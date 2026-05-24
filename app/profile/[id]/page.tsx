@@ -35,7 +35,7 @@ const COND_COLORS: Record<string, { bg: string; text: string }> = {
 };
 
 export default function ProfilePage({ params }: { params: any }) {
-  const { id } = React.use(params);
+  const id = params.id;
   const seller = SELLERS[id] || SELLERS["techresell"];
   const sellerListings = LISTINGS.filter(l => l.seller === seller.id);
   const [activeTab, setActiveTab] = useState<"listings" | "reviews">("listings");
