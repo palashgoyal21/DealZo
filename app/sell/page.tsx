@@ -50,7 +50,7 @@ export default function SellPage() {
           <div style={{ fontSize: 64, marginBottom: 16 }}>🚀</div>
           <h2 style={{ fontWeight: 800, fontSize: 28, color: "#fff", marginBottom: 8 }}>Listing published!</h2>
           <p style={{ color: "#aaa", fontSize: 16, marginBottom: 8 }}>
-            <span style={{ color: "#a78bfa", fontWeight: 600 }}>{form.title}</span> is now live on Dealzo.
+            <span style={{ color: "#a78bfa", fontWeight: 600 }}>{form.title}</span> is now live on CellSwapp.
           </p>
           <p style={{ color: "#555", fontSize: 14, marginBottom: 32 }}>Buyers can find your listing and make offers.</p>
           <div style={{ display: "flex", gap: 12, justifyContent: "center", flexWrap: "wrap" }}>
@@ -74,7 +74,7 @@ export default function SellPage() {
       <nav style={{ background: "#18181f", borderBottom: "1px solid #2a2a35", padding: "0 24px", height: 60, display: "flex", alignItems: "center", justifyContent: "space-between" }}>
         <a href="/" style={{ display: "flex", alignItems: "center", gap: 8, textDecoration: "none" }}>
           <span style={{ fontSize: 22 }}>⚡</span>
-          <span style={{ fontWeight: 700, fontSize: 20, color: "#a78bfa" }}>Dealzo</span>
+          <span style={{ fontWeight: 700, fontSize: 20, color: "#a78bfa" }}>CellSwapp</span>
         </a>
         <span style={{ color: "#555", fontSize: 14 }}>Create a listing</span>
       </nav>

@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 const BASE = "http://localhost:5000/api";
 
 async function apiRequest(path: string, options: RequestInit = {}) {
-  const token = typeof window !== "undefined" ? localStorage.getItem("dealzo_token") : null;
+  const token = typeof window !== "undefined" ? localStorage.getItem("CellSwapp_token") : null;
   const res = await fetch(`${BASE}${path}`, {
     headers: {
       "Content-Type": "application/json",
@@ -59,15 +59,15 @@ export default function AuthPage() {
             password: fields.password,
           }),
         });
-        localStorage.setItem("dealzo_token", data.token);
-        localStorage.setItem("dealzo_user", JSON.stringify(data.user));
+        localStorage.setItem("CellSwapp_token", data.token);
+        localStorage.setItem("CellSwapp_user", JSON.stringify(data.user));
       } else {
         const data = await apiRequest("/auth/login", {
           method: "POST",
           body: JSON.stringify({ email: fields.email, password: fields.password }),
         });
-        localStorage.setItem("dealzo_token", data.token);
-        localStorage.setItem("dealzo_user", JSON.stringify(data.user));
+        localStorage.setItem("CellSwapp_token", data.token);
+        localStorage.setItem("CellSwapp_user", JSON.stringify(data.user));
       }
       setSubmitted(true);
     } catch (err: unknown) {
@@ -108,7 +108,7 @@ export default function AuthPage() {
             {mode === "signup" ? `Welcome, ${fields.firstName}!` : "Welcome back!"}
           </h2>
           <p style={{ color: "#aaa", fontSize: 16, marginBottom: 32 }}>
-            {mode === "signup" ? "Your account is ready. Start browsing verified electronics." : "You're signed in. Good to have you back on Dealzo."}
+            {mode === "signup" ? "Your account is ready. Start browsing verified electronics." : "You're signed in. Good to have you back on CellSwapp."}
           </p>
           <button onClick={() => router.push("/")}
             style={{ background: "linear-gradient(90deg, #a78bfa, #818cf8)", border: "none", color: "#fff", fontWeight: 700, fontSize: 16, borderRadius: 999, padding: "14px 36px", cursor: "pointer" }}>
@@ -124,7 +124,7 @@ export default function AuthPage() {
       <nav style={{ background: "#18181f", borderBottom: "1px solid #2a2a35", padding: "0 24px", height: 60, display: "flex", alignItems: "center" }}>
         <a href="/" style={{ display: "flex", alignItems: "center", gap: 8, textDecoration: "none" }}>
           <span style={{ fontSize: 22 }}>⚡</span>
-          <span style={{ fontWeight: 700, fontSize: 20, color: "#a78bfa" }}>Dealzo</span>
+          <span style={{ fontWeight: 700, fontSize: 20, color: "#a78bfa" }}>CellSwapp</span>
         </a>
       </nav>
 
@@ -142,7 +142,7 @@ export default function AuthPage() {
             </div>
 
             <h2 style={{ fontWeight: 800, fontSize: 22, color: "#fff", marginBottom: 4 }}>
-              {mode === "login" ? "Sign in to Dealzo" : "Create your account"}
+              {mode === "login" ? "Sign in to CellSwapp" : "Create your account"}
             </h2>
             <p style={{ color: "#555", fontSize: 14, marginBottom: 24 }}>
               {mode === "login" ? "Don't have an account? " : "Already have an account? "}

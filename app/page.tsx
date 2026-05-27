@@ -45,7 +45,7 @@ export default function Home() {
       <nav style={{ background: "#18181f", borderBottom: "1px solid #2a2a35", padding: "0 24px", height: 60, display: "flex", alignItems: "center", gap: 16, position: "sticky", top: 0, zIndex: 100 }}>
         <a href="/" style={{ display: "flex", alignItems: "center", gap: 8, textDecoration: "none" }}>
           <span style={{ fontSize: 22 }}>⚡</span>
-          <span style={{ fontWeight: 700, fontSize: 20, color: "#a78bfa" }}>Dealzo</span>
+          <span style={{ fontWeight: 700, fontSize: 20, color: "#a78bfa" }}>CellSwapp</span>
         </a>
         <div style={{ flex: 1, position: "relative", maxWidth: 480 }}>
           <span style={{ position: "absolute", left: 12, top: "50%", transform: "translateY(-50%)", opacity: 0.4 }}>🔍</span>
@@ -179,7 +179,7 @@ export default function Home() {
           <a href="/login" style={{ color: "#666", textDecoration: "none" }}>Sign up</a>
           <a href="/login" style={{ color: "#666", textDecoration: "none" }}>Login</a>
         </div>
-        <span style={{ color: "#a78bfa", fontWeight: 700 }}>⚡ Dealzo</span> — Buy &amp; sell electronics with confidence. © 2026
+        <span style={{ color: "#a78bfa", fontWeight: 700 }}>⚡ CellSwapp</span> — Buy &amp; sell electronics with confidence. © 2026
       </footer>
     </div>
   );
